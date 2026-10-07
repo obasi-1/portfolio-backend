@@ -20,6 +20,7 @@ class Project(models.Model):
     title = models.CharField(max_length=200)
     tagline = models.CharField(max_length=255)
     description = models.TextField()
+    image = models.URLField(max_length=500, blank=True, null=True)
     
     is_flagship = models.BooleanField(default=False)
     
