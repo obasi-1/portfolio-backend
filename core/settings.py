@@ -78,7 +78,12 @@ DATABASES = {
     )
 }
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173", # Keeps your local development working
+    "https://portfolio-frontend-jet-one.vercel.app", # Keeps your old Vercel link working as a backup
+    "https://oteiobasisam.me",
+    "https://www.oteiobasisam.me",
+]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
